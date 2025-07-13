@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基础终端命令学习</title>
+    <style>
+        body {
+            font-family: 'SimSun', '宋体', serif;
+            margin: 40px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        .cmd {
+            font-family: 'Courier New', monospace;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        
+        .workflow {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 20px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            line-height: 1.6;
+            overflow-x: auto;
+        }
+        
+        .comment {
+            color: #95a5a6;
+        }
+        
+        .highlight {
+            color: #f39c12;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>🖥️ 基础终端命令学习指南</h1>
+    
+    <h2>📋 常用命令表</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>命令</th>
+                <th>英文全称及中文翻译</th>
+                <th>使用方法</th>
+                <th>中文说明</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><span class="cmd">pwd</span></td>
+                <td>Print Working Directory<br>（打印工作目录）</td>
+                <td><span class="cmd">pwd</span></td>
+                <td>显示当前所在的文件夹路径，告诉你现在在哪里</td>
+            </tr>
+            <tr>
+                <td><span class="cmd">ls</span></td>
+                <td>List<br>（列出）</td>
+                <td><span class="cmd">ls</span><br><span class="cmd">ls -la</span><br><span class="cmd">ls 文件夹名</span></td>
+                <td>列出当前文件夹里的所有文件和子文件夹</td>
+            </tr>
+            <tr>
+                <td><span class="cmd">mkdir</span></td>
+                <td>Make Directory<br>（创建目录）</td>
+                <td><span class="cmd">mkdir 新文件夹名</span><br><span class="cmd">mkdir -p 路径/新文件夹</span></td>
+                <td>创建一个新的文件夹</td>
+            </tr>
+            <tr>
+                <td><span class="cmd">cd</span></td>
+                <td>Change Directory<br>（改变目录）</td>
+                <td><span class="cmd">cd 文件夹名</span><br><span class="cmd">cd ..</span><br><span class="cmd">cd ~</span><br><span class="cmd">cd ~/桌面</span></td>
+                <td>进入指定的文件夹。<br>.. 表示上一级文件夹<br>~ 表示用户主目录</td>
+            </tr>
+            <tr>
+                <td><span class="cmd">touch</span></td>
+                <td>Touch<br>（触碰/创建）</td>
+                <td><span class="cmd">touch 文件名.txt</span><br><span class="cmd">touch 文件1.py 文件2.py</span></td>
+                <td>创建一个新的空文件，或者更新现有文件的时间戳</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h2>🚀 实战演练工作流程</h2>
+    <p>下面是一个完整的项目下载和运行流程，跟着一步步做：</p>
+    
+    <ol style="font-size: 16px; line-height: 2; margin: 20px 0;">
+        <li><strong>看看我现在在哪个文件夹：</strong> <span class="cmd">pwd</span></li>
+        <li><strong>看看当前文件夹里有什么文件：</strong> <span class="cmd">ls</span></li>
+        <li><strong>回到用户主目录（就像回到自己的房间）：</strong> <span class="cmd">cd ~</span></li>
+        <li><strong>创建一个新文件夹，用今天的日期命名：</strong> <span class="cmd">mkdir 20250713</span></li>
+        <li><strong>进入刚才创建的文件夹：</strong> <span class="cmd">cd 20250713</span></li>
+        <li><strong>从GitHub下载我们的Python项目（就像下载一个游戏）：</strong><br>
+            <span class="cmd">git clone https://github.com/aicoder2048/python-basic-keywords</span></li>
+        <li><strong>进入下载好的项目文件夹：</strong> <span class="cmd">cd python-basic-keywords</span></li>
+        <li><strong>安装项目需要的工具和库（就像安装游戏需要的组件）：</strong> <span class="cmd">uv sync</span></li>
+        <li><strong>运行我们的数字猜猜乐游戏！</strong> <span class="cmd">uv run guess_num_simple.py</span></li>
+        <li><strong>如果以后想更新项目，可以用这个命令获取最新版本：</strong> <span class="cmd">git pull</span></li>
+    </ol>
+    
+    <h2>💡 小贴士</h2>
+    <ul>
+        <li>终端命令大小写敏感，要完全按照格式输入</li>
+        <li>如果命令输错了，按 <span class="cmd">Ctrl+C</span> 可以取消当前命令</li>
+        <li>按上箭头键可以重复上一个命令</li>
+        <li>Tab键可以自动补全文件名和文件夹名</li>
+        <li>遇到问题不要怕，多练习就会熟练啦！</li>
+    </ul>
+    
+    <p style="text-align: center; margin-top: 40px; color: #7f8c8d;">
+        <em>🌟 编程之路，从命令行开始！加油小程序员们！</em>
+    </p>
+</body>
+</html>

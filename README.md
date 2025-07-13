@@ -1,6 +1,13 @@
 # Python 关键词打字练习：数字猜猜乐
 
-本练习旨在帮助大家熟悉 Python 编程中常用的 19个关键词，通过“数字猜猜乐”小游戏进行实践。
+本练习旨在帮助大家熟悉 Python 编程中常用的 19个关键词，通过"数字猜猜乐"小游戏进行实践。
+
+## 📁 项目文件
+
+- `guess_num_simple.py` - 简易版数字猜猜乐（适合初学者）
+- `guess_num.py` - 标准版数字猜猜乐（面向对象实现）
+- `basic_terminal_cmds.html` - 终端命令学习指南（包含完整工作流程）
+- `CLAUDE.md` - 项目开发指南
 
 ## 关键词及用法说明
 
@@ -25,21 +32,34 @@
 | `None`           | 空值                        |
 | `True` / `False` | 布尔值，顺带教育 True/False 大小写规范 |
 
-## 如何运行
+## 🚀 快速开始
 
-1. 安装依赖（需先安装 [uv](https://github.com/astral-sh/uv)）：
+### 第一次使用
 
-```bash
-uv sync
-```
+1. **查看终端命令指南**：
+   ```bash
+   open basic_terminal_cmds.html
+   ```
+   这个命令会在浏览器中打开终端命令学习指南
 
-2. 运行简易版或标准版：
+2. **安装依赖**（需先安装 [uv](https://github.com/astral-sh/uv)）：
+   ```bash
+   uv sync
+   ```
 
-```bash
-uv run guess_num_simple.py
-# 或
-uv run guess_num.py
-```
+3. **运行游戏**：
+   ```bash
+   uv run guess_num_simple.py  # 简易版（推荐初学者）
+   # 或
+   uv run guess_num.py         # 标准版（面向对象）
+   ```
+
+### 完整学习流程
+
+1. 📖 运行 `open basic_terminal_cmds.html` 学习终端命令
+2. 🎮 运行 `guess_num_simple.py` 体验游戏
+3. 📚 阅读代码学习 Python 关键词
+4. 🔧 尝试运行 `guess_num.py` 了解面向对象编程
 
 ---
 
